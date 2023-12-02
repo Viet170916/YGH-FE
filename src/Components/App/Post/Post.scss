@@ -1,0 +1,115 @@
+@import "src/index";
+
+.card-wrapper {
+     position: relative;
+    //  max-width: 300px;
+     a {
+          overflow: hidden;
+          position: relative;
+          display: grid;
+          width: 100%;
+          height: 100%;
+     }
+     .follower-list {
+          //width: 100%;
+          right: 30px;
+          bottom: 15px;
+          color: var(--light-font-color);
+          z-index: 2;
+          position: absolute;
+          display: flex;
+          justify-content: flex-end;
+          font-size: 1.5em;
+          grid-area: heart;
+          &:hover {
+               color: var(--red);
+               cursor: pointer;
+          }
+     }
+     .card-image-wrapper2 {
+
+          width: 100%;
+          height: 260px;
+          .img {
+               width: 100%;
+               height: 100%;
+          }
+     }
+     .under-post {
+          height: 40px;
+          display: grid;
+          grid-template-areas:
+                    "none none rating"
+                    "price price heart";
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 20px 20px;
+          justify-items: stretch;
+          align-items: end;
+          .review-amount {
+               grid-area: rating;
+               display: flex;
+               justify-content: flex-end;
+          }
+          .price-card-wrapper {
+               height: 20px;
+               grid-area: price;
+          }
+     }
+     .post-option-wrapper {
+          position: absolute;
+          z-index: 2;
+          top: 20px;
+          right: 0;
+          justify-items: end;
+          .see-more-button {
+               right: 22px;
+               position: absolute;
+               display: none;
+               border: none;
+               background-color: transparent;
+               transition: 0.2s;
+               .see-more {
+                    font-size: 2em;
+                    color: var(--white);
+               }
+          }
+          .post-option-list {
+               top: 23px;
+               position: absolute;
+               height: 0;
+               overflow: hidden;
+               right: -10px;
+               border-radius: .9em;
+               background: var(--white);
+               box-shadow: rgba(128, 128, 128, 0.62) 2px 5px 5px;
+               ul {
+                    margin: 3px 0;
+                    padding: 5px 5px 5px 5px;
+                    a {
+                         user-select: none;
+                         color: $secondary-font-color;
+                         padding: 5px 0;
+                         &:hover {
+                              color: red;
+                         }
+                    }
+               }
+               &.see {
+                    height: 150px;
+               }
+          }
+     }
+     &:hover {
+          .post-option-wrapper {
+               .see-more-button {
+                    display: grid;
+                    transition: 0.2s;
+                    .see-more {
+                         &:hover {
+                              color: var(--red) !important;
+                         }
+                    }
+               }
+          }
+     }
+}

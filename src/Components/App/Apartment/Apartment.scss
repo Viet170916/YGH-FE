@@ -1,0 +1,194 @@
+     $image-size-height: 500px;
+     $image-size-width: 500px;
+     .apartment-wrapper {
+          .apartment-overlay {
+
+               .apartments {
+                    &.an-overlay {
+                         width: 80vw;
+                         height: 80vh;
+                         background: white;
+                         overflow-y: auto;
+                         overflow-x: hidden;
+                         .apartment-behavior{
+                              margin: 0 60px;
+                              height: max-content;
+                              padding-bottom: 60px;
+                              .apartment-title {
+                                   max-height: 100px;
+                              }
+                              .apartment-description {
+                                   height: unset;
+                                   padding-bottom: 20px;
+                                   .apartment-description-content {
+                                        height: unset;
+                                        &, p {
+                                             overflow: unset;
+                                             //max-width: 100%;
+                                             display: unset;
+                                             -webkit-line-clamp: unset;
+                                             -webkit-box-orient: unset;
+                                             text-overflow: unset;
+                                        }
+                                   }
+                              }
+                              .area-below-main{
+                                   display: grid;
+                                   grid-template-columns: unset;
+                                   .bed-type-pre-show-wrapper{
+                                        .selected{
+                                             color: var(--red);
+                                             opacity: .6;
+                                        }
+                                   }
+                              }
+                         }
+                         .apartment-control{
+                              display: grid;
+                              justify-items: end;
+                              align-items: end;
+                              margin-top: 10px;
+                              button, .red-button{
+                                   color: var(--red);
+                                   border: 1px solid var(--light-font-color);
+                                   height: 40px;
+                                   width: 70px;
+                                   opacity: .8;
+                                   &:hover{
+                                        border: 1px solid var(--red);
+
+                                   }
+                              }
+                         }
+
+                    }
+               }
+          }
+          .apartments {
+               position: relative;
+               border-bottom: 1px solid var(--light-font-color);
+               display: grid;
+               gap: 30px;
+               &.ImagesOnLeft {
+                    grid-template-columns: minmax($image-size-width, 1fr) 1fr;
+               }
+               &.ImagesOnRight {
+                    grid-template-columns: 1fr minmax($image-size-width, 1fr);
+               }
+               .price-displayed {
+                    //font-size: 2em;
+               }
+               .right-apartment-content {
+                    position: relative;
+                    bottom: 0;
+                    justify-self: end;
+                    display: grid;
+                    grid-template-areas:
+                         "left right-upper "
+                         "left right-under";
+                    justify-items: end;
+                    justify-content: space-between;
+                    align-items: end;
+                    width: 100%;
+               }
+               .apartment-behavior {
+                    height: 100%;
+                    cursor: pointer;               
+                    .apartment-content {
+                         height: 100%;
+                         position: relative;
+                         display: grid;
+                         //margin: 0 30px 0 0;
+                         .area-below-main {
+                              display: grid;
+                              grid-template-columns: 1fr 1fr;
+                              gap: 20px
+                         }
+                         .apartment-area {
+                              display: grid;
+                              justify-items: start;
+                              gap: 10px;
+                              width: 70px;
+                              height: 70px;
+                              border: 1px solid var(--light-font-color);
+                              border-radius: 1em;
+                              padding: 10px;
+                              .grid-icon {
+                                   font-weight: lighter;
+                              }
+                              .value {
+                                   font-size: .8em;
+                              }
+                         }
+                         h2 {
+                              &.apartment-title {
+                                   margin-top: 0;
+                                   font-size: 2.5em;
+                                   overflow: hidden;
+                                   max-width: 100%;
+                                   display: -webkit-box;
+                                   -webkit-line-clamp: 1;
+                                   -webkit-box-orient: vertical;
+                                   text-overflow: ellipsis;
+                              }
+                         }
+                         .apartment-description {
+                              margin-bottom: 20px;
+                              height: 110px;
+                              .see-more {
+                                   margin-top: 5px;
+                                   text-decoration: underline;
+                                   cursor: pointer;
+                              }
+                              section {
+                                   &, p {
+                                        overflow: hidden;
+                                        max-width: 100%;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 4;
+                                        -webkit-box-orient: vertical;
+                                        text-overflow: ellipsis;
+                                   }
+                              }
+                              position: relative;
+                              width: 100%;
+                         }
+                    }
+                    .overflow-x-auto-wrapper {
+                         display: flex;
+                         max-height: 70px;
+                         height: max-content;
+                         position: relative;
+                         overflow-x: auto;
+                         overflow-y: hidden;
+                         margin: 10px 0;
+                         .inside-overflow-x-auto {
+                              min-height: 70px;
+                              position: relative;
+                              gap: 10px;
+                              width: max-content;
+                              display: flex;
+                         }
+                    }
+               }
+               .apartment-image-wrapper {
+                    height: $image-size-height;
+                    width: 100%;
+               }
+          }
+     }
+     .top-z-index{
+          z-index: 99999999;
+     }
+
+
+
+
+
+
+
+
+
+
+
+     

@@ -1,0 +1,128 @@
+.auth-page {
+    display: flex;
+
+    .image-list {
+        position: absolute;
+        right: 50px;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+
+    .auth-container {
+        position: relative;
+        left: 20vw;
+        top: 50vh;
+        // height: 70vh;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        width: 400px;
+        padding: 30px;
+        outline: 1px solid #b12145;
+
+        .signIn,
+        .login {
+            padding-bottom: 30px;
+            display: grid;
+            position: relative;
+            flex-direction: column;
+
+            .signIn__input,
+            .login__input {
+                display: grid;
+                flex-direction: row;
+
+                .input__block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    input {
+                        transition: all 0.2s ease-in-out;
+                        border-left: 1px solid transparent;
+                        padding: 10px;
+
+                        &:focus {
+                            border-left: 5px solid var(--red);
+                        }
+                    }
+
+                }
+            }
+
+            .signIn-foot {
+                width: 100%;
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .sign-in-confirm {
+                    font-size: 0.8em;
+                }
+
+                &.page2 {
+                    grid-template-columns: 1fr;
+                }
+
+                .signIn__checkbox {
+                    input {
+                        height: 12px;
+                        width: 12px;
+                    }
+                }
+
+
+            }
+        }
+
+        .title {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-weight: bold;
+            display: flex;
+            color: var(--red);
+            font-weight: 800;
+        }
+    }
+
+    .signIn__button,
+    .login__button {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        column-gap: 10px;
+    }
+
+    .button1 {
+        width: 100%;
+        padding: 10px 0;
+        background-color: white;
+        color: var(--red);
+        font-weight: bold;
+        transition: all 0.2s ease-in-out;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .button2 {
+        width: 100%;
+        padding: 10px 0;
+        font-weight: bold;
+        background-color: var(--red);
+        color: white;
+        transform: scale(0.9);
+
+        &:hover {
+            background-color: white;
+            color: var(--red);
+            outline: 2px solid var(--red);
+            transform: scale(1);
+        }
+    }
+}

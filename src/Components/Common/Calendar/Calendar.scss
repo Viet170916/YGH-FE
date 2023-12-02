@@ -1,0 +1,137 @@
+
+a {
+     text-decoration: none;
+}
+
+.calendar-container {
+     user-select: none;
+     //font-family: 'Roboto', sans-serif;
+     color: black;
+     background: white;
+     border-radius: 4px;
+     padding-bottom: 10px;
+     transition: .9s;
+     transform-style: preserve-3d;
+     width: 100%;
+     max-width: 400px;
+     .current-date-time {
+          transform: rotateY(0deg);
+          .current-date {
+               border-bottom: 1px solid rgba(73, 114, 133, .6);
+               display: flex;
+               justify-content: space-between;
+               padding: 10px 40px;
+               h1 {
+                    //color: #dfebed;
+                    font-size: 1em;
+                    font-weight: 300;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+               }
+               .buttons-wrapper {
+                    display: grid;
+                    gap: 10px;
+                    grid-template-columns: 1fr 1fr;
+                    button {
+                         display: grid;
+                         //color: var(--white);
+                         font-size: 2em;
+                         &.inactive {
+                              opacity: 12%;
+                         }
+                    }
+               }
+          }
+          .current-month {
+               .week-days {
+                    //color: #dfebed;
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 5px;
+                    font-weight: 600;
+                    padding: 20px 20px;
+                    text-align: center;
+               }
+               .calendar-board {
+                    //color: #fff;
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    flex-direction: column;
+                    padding: 0 20px;
+                    gap: 5px;
+                    span {
+                         position: relative;
+                         font-size: 0.9em;
+                         font-weight: 300;
+                         padding: 10px;
+                         border: 1px solid transparent;
+                         text-align: center;
+                         .popup-date-selected {
+                              display: flex;
+                              position: absolute;
+                              border-radius: 1em;
+                              background: white;
+                              padding: 2px;
+                              font-size: .5em;
+                              &.start {
+                                   //transform: translateY(-50px);
+                                   top: 0;
+                                   transform: translateX(-20px);
+                                   color: var(--base-green);
+
+
+                              }
+                              &.end {
+                                   transform: translateX(25px);
+                                   bottom: 2px;
+                                   color: var(--base-green);
+
+                              }
+                         }
+                         &.not-in-current-month {
+                              opacity: .3;
+                         }
+                         &.active {
+                              color: #f78536;
+                         }
+                         &.event {
+                              position: relative;
+                              &:after {
+                                   content: '•';
+                                   color: #f78536;
+                                   font-size: 1.4em;
+                                   position: absolute;
+                                   right: -4px;
+                                   top: -4px;
+                              }
+                         }
+                         &.over {
+                              text-decoration: line-through;
+                         }
+                         &.selected {
+                              border: 1px solid var(--light-font-color);
+                              //background: var(--base-green);
+                              border-radius: 1rem;
+                         }
+                         &:not(.last-month):hover {
+                              cursor: pointer;
+                              font-weight: 600;
+                         }
+                         &.is-overlap {
+                              color: var(--red);
+                              opacity: .4;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+/* Front - Calendar */
+
+
+
+

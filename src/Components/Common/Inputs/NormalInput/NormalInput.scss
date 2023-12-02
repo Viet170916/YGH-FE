@@ -1,0 +1,11 @@
+.input-container{
+    position: relative;
+    // width: 350px;
+    .input{
+        font-size: 26px;
+        border: unset;
+        border-bottom: 1px solid var(--secondary-border-color);
+        background-color: unset;
+        width: 100%;
+    }
+}

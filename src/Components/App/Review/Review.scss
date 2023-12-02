@@ -1,0 +1,91 @@
+.review-component-wrapper {
+     margin: 50px 100px;
+     padding-bottom: 10px;
+     .label {
+          display: grid;
+          grid-template-areas: "title title"
+     "text star";
+          grid-auto-columns: fit-content(50px) 1fr;
+          gap: 10px;
+          margin: 20px 0;
+          h3 {
+               grid-area: title;
+               margin: 0;
+          }
+          .text {
+               grid-area: text;
+               display: flex;
+               gap: 5px;
+          }
+          .star {
+               grid-area: star;
+               display: flex;
+               gap: 5px;
+          }
+     }
+     .reviews-display {
+          display: grid;
+          justify-content: center;
+          width: 100%;
+     }
+}
+
+.comment {
+     padding: 10px;
+     width: 100%;
+     .user-introduce {
+          min-width: 600px;
+          max-width: 1000px;
+          width: 100%;
+          .user-content {
+               display: grid;
+               grid-template-columns: 50px 1fr;
+               gap: 10px;
+               .image {
+                    border-radius: .5em;
+                    overflow: hidden;
+                    height: 50px;
+                    width: 50px;
+               }
+               .user-name {
+                    h3 {
+                         margin: 0;
+                    }
+               }
+               .star-vote {
+                    display: flex;
+                    font-size: .6em;
+                    color: var(--buttons-color-primary);
+                    .overlay-overlays {
+                         display: flex;
+                         position: absolute;
+                         .overlay-star {
+                              display: flex;
+                              cursor: pointer;
+                              position: relative;
+                              //background: lawngreen;
+                         }
+                    }
+               }
+          }
+     }
+     .review-content {
+          display: grid;
+          grid-template-columns: 1fr 120px;
+          .review-comment {
+          }
+     }
+     .review-footer {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          gap: 10px;
+          span {
+               margin-bottom: 5px;
+               position: relative;
+               color: var(--light-font-color);
+               font-size: .7em;
+          }
+     }
+}

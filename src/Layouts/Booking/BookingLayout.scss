@@ -1,0 +1,76 @@
+.reservation-layout {
+     display: grid;
+     justify-items: center;
+     .apartments {
+          margin:100px;
+          .price-displayed{
+               display: flex;
+               justify-content: flex-end;
+               //font-weight: bold;
+               font-size: 1.5em;
+               //color: var(--light-font-color);
+               margin-top: 40px;
+          }
+          .summary-post {
+               margin-bottom: 20px;
+               width: 100%;
+               height: 120px;
+               overflow: hidden;
+               display: flex;
+               position: relative;
+               gap: 10px;
+               .image {
+                    width: 130px;
+                    height: 100px;
+                    .apartment-image {
+                         width: 100%;
+                         height: 100%;
+                    }
+               }
+               .apartment-description {
+                    margin-left: 10px;
+                    h2{
+                         margin-top: 0;
+                    }
+               }
+
+
+          }
+          .selection{
+               .bed-type-pre-show-wrapper {
+                    .selected {
+                         color: var(--red);
+                         opacity: .6;
+                    }
+               }
+               .about-you{
+                    .label{
+                         margin: 20px 0;
+                         font-size: 1.3em;
+                         font-weight: bold;
+                    }
+                    h4{
+                         margin-bottom: 0;
+                    }
+                    .border-bottom-light-color{
+                         width: 200px;
+                         padding-bottom: 2px;
+                         .email-inner-text{
+                              padding-bottom: 5px;
+                              color: var(--light-font-color);
+                         }
+                    }
+               }
+          }
+          .confirmation{
+               padding-top: 10px;
+               padding-bottom: 50px;
+               display: grid;
+               gap:40px;
+               grid-template-columns: 1fr 100px;
+               button{
+                    justify-self: end;
+               }
+          }
+     }
+}

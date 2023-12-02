@@ -1,0 +1,110 @@
+.card-wrapper-list {
+     .card-list {
+          margin: 0 0 20px 0;
+          cursor: pointer;
+          //box-shadow: rgba(0, 0, 0, 0.38) 3px 1px 20px;
+          //height: 100px!important;
+          //overflow: hidden;
+          display: grid !important;
+          width: 100%;
+          grid-template-columns: 70px 1fr;
+          .card-image-wrapper-list {
+               position: relative;
+               left: -10px;
+               top: -10px;
+               //border-radius: 1em;
+               background: burlywood;
+               height: 70px !important;
+               padding-top: 0 !important;
+               margin: 0;
+               width: 70px;
+               overflow: hidden;
+               img {
+                    max-width: 100px;
+                    width: 100%;
+               }
+          }
+          .apartment-title {
+               cursor: pointer;
+               user-select: none;
+               margin: 0 0 10px 0;
+               font-size: 2em;
+          }
+          .card-info-list {
+               span{
+                    &.card-price{
+                         margin: 0;
+                         color: var(--light-font-color);
+                    }
+
+               }
+               .card-detail-information {
+                    transition: 0.4s;
+
+                    height: 0;
+                    overflow: hidden;
+                    .card-image-wrapper-list {
+                         left: 0;
+                         top: 0;
+                         border-radius: 0;
+                         height: 100px !important;
+                    }
+                    margin: 10px 10px;
+                    //background: cadetblue;
+                    display: grid !important;
+                    grid-template-columns: 1fr 240px;
+                    .content-card-detail {
+                         margin-left: 10px;
+                    }
+                    .status-buttons {
+                         display: grid;
+                         grid-template-columns: 1fr 1fr;
+                         align-items: end
+                    }
+                    .request-status {
+                         display: grid;
+                         justify-content: center;;
+                    }
+               }
+          }
+     }
+     &.see {
+          .card-detail-information{
+               height: 125px;
+          }
+     }
+     &:hover{
+          .card-detail-information{
+               transition: 0.4s;
+               height: 125px!important;
+          }
+     }
+}
+.buttons{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 10px;
+}
+.status-button {
+     font-family: "Quicksand", sans-serif;
+     color: var(--white);
+     text-align: center;
+     background: var(--app-bg);
+     font-weight: 600;
+     width: 50px;
+     height: 25px;
+     border-radius: 0.4em;
+     &:hover{
+          scale: 105%;
+     }
+     &.green {
+          background: var(--base-green);
+     }
+     &.red {
+          background: var(--buttons-color-primary);
+     }
+}
+
+a {
+     cursor: pointer;
+}

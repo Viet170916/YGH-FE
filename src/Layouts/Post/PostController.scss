@@ -1,0 +1,139 @@
+html {
+     scroll-behavior: smooth;
+}
+
+.post-content-page {
+     .left-apartment-container {
+          margin: 100px;
+          display: grid;
+          gap: 100px;
+     }
+
+     .head-of-post {
+          margin: 0 100px;
+          display: grid;
+          grid-template-columns: 1fr 400px;
+          gap: 20px;
+
+          .show-more {
+               margin-top: 5px;
+               text-decoration: underline;
+               cursor: pointer;
+          }
+
+          .accommodation-description {
+               //padding: 20px;
+               overflow: hidden;
+               max-width: 100%;
+               margin: 20px 0;
+               //section{
+               text-align: justify //}
+          }
+
+          .owner-information {
+               //height: 500px;
+               margin: 20px 0;
+
+               .avatar-and-name {
+                    border-top: 1px solid var(--light-font-color);
+                    border-bottom: 1px solid var(--light-font-color);
+
+                    //justify-items: end;
+                    height: 70px;
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 70px 1fr;
+
+                    .avatar-post {
+                         position: relative;
+                    }
+
+                    .name-and-summary-info {
+                         .name {
+                              display: flex;
+                              font-size: 1em;
+                              font-weight: bold;
+                              padding-top: 10px;
+                         }
+
+                         .apartment-number {
+                              //display: grid;
+                              font-size: .7em;
+                         }
+
+                         .post-number {
+                              //display: grid;
+                              font-size: .7em;
+                         }
+                    }
+
+               }
+          }
+     }
+
+     .amenities-list-filter {
+          position: relative;
+          width: 100%;
+          margin: 20px 0;
+          padding: 5px 20px;
+          height: max-content;
+          display: grid;
+
+          .title {
+               h3 {
+                    &.title-content {
+                         margin: 10px;
+                         min-height: 10px;
+                    }
+               }
+          }
+
+          .filter-selection {
+               display: flex;
+               flex-wrap: wrap;
+               padding: 5px 0;
+          }
+     }
+
+     .accommodation-post {
+          z-index: 200;
+          position: relative;
+
+          .overlay-slide-container {}
+     }
+
+     .detail-accommodation-information {
+          .accommodation-description {
+
+               overflow: hidden;
+               max-width: 100%;
+               display: -webkit-box;
+               -webkit-line-clamp: 4;
+               -webkit-box-orient: vertical;
+               text-overflow: ellipsis;
+
+          }
+
+          p {
+               margin: 0;
+               padding: 0;
+               //white-space: nowrap;
+               overflow: hidden;
+               max-height: 200px;
+               max-width: 100%;
+               display: -webkit-box;
+               -webkit-line-clamp: 0;
+               -webkit-box-orient: vertical;
+               text-overflow: ellipsis;
+
+          }
+
+          .short-introduction {}
+
+          .accommodation-title-post {
+               font-size: 3em;
+               margin-top: 10px;
+               height: 70px;
+          }
+     }
+}

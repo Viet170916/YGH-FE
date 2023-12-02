@@ -1,0 +1,56 @@
+.notification-over-lay {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100vw;
+  height: 100vh;
+}
+.notification-list-container {
+  position: absolute;
+  background-color: var(--bg-color);
+  display: flex;
+  z-index: 2;
+  overflow-y: auto;
+  flex-direction: column;
+  right: 13%;
+  top: -230px;
+  width: 300px;
+  height: 600px;
+  box-shadow: 0px 0px 10px 1px var(--main-border-color);
+  transform: translateX(50%) translateY(50%);
+  .notification-list-header {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--grey);
+    .mark-as-read-btn {
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: var(--light-font-color);
+        text-decoration: underline;
+      }
+    }
+  }
+  .notifications {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    .notification-container {
+      transition: 0.2s;
+      padding: 0.5rem;
+      min-height: 3rem;
+      max-height: max-content;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--secondary-border-color);
+      }
+    }
+    .unread {
+      font-weight: 900;
+    }
+  }
+}
+.hide {
+  display: none;
+}

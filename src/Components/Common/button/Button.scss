@@ -1,0 +1,21 @@
+$button-main-bg: #999999;
+$button-second-bg: #D9D9D9;
+
+.button-container{
+
+    border-radius: 4px;
+    .button{
+        font-size: 26px;
+        padding: 4px 12px;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+    }
+
+    .button--main{
+        background-color: $button-main-bg;
+    }
+
+    .button--second{
+        background-color: $button-second-bg;
+    }
+}

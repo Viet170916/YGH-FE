@@ -1,0 +1,67 @@
+.summary-post {
+     height: 45px;
+     overflow: hidden;
+     display: grid;
+     width: max-content;
+     position: relative;
+     grid-template-columns: 60px 1fr;
+     gap: 5px;
+     .summary-post-image-wrapper {
+          border-radius: .2em;
+          position: relative;
+          //transform: translateX(-10px);
+          width: 100%;
+
+          overflow: hidden;
+          img {
+               width: 100%;
+          }
+     }
+     .summary-post-content {
+          position: relative;
+          //width: 100%;
+          overflow: hidden;
+          min-width: 250px;
+          padding-bottom: 10px;
+          padding-right: 10px;
+
+          display: grid;
+          grid-template-areas:
+                  "title title"
+                  "apartment order";
+          grid-template-rows: 20px 20px;
+          grid-template-columns: 120px 1fr;
+          align-items: end;
+          //justify-items: end;
+          .summary-post-title {
+               margin: 0;
+               grid-area: title;
+               width: 230px;
+               font-size: 1em;
+          }
+          .summary-post-number-of-apartment {
+
+               font-size: .7rem;
+               grid-area: apartment;
+          }
+          .summary-post-number-of-order {
+               position: relative;
+               width: 100px;
+               gap: 10px;
+               span {
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: .6rem;
+               }
+               svg{
+                    transform: translateY(2px);
+                    color: var(--base-green);
+               }
+               display: flex;
+
+               align-items: end;
+               grid-area: order;
+               font-size: 1.2em;
+          }
+     }
+}

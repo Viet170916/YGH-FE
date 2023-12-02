@@ -1,0 +1,11 @@
+.multiline-checkbox{
+    border-radius: 5px;
+    user-select: none;
+    // padding: 5px;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    &:active{
+        transform: scale(0.8);
+    }
+}
+

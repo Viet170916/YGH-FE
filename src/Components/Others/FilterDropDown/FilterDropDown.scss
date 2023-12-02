@@ -1,0 +1,31 @@
+.frame-drop {
+     border: var(--base-blur-text-color) solid 1px;
+     border-top: none;
+
+     width: 200px;
+     height: max-content;
+     padding: 20px 0 20px 0;
+     display: grid;
+     gap: 10px;
+     background-color: var(--secondary-background);
+     color: var(--base-blur-text-color);
+     position: absolute;
+     margin-top: 5px;
+     .get-current-location {
+          padding: 10px;
+          border-top: var(--base-blur-text-color) solid 1px;
+          border-bottom: var(--base-blur-text-color) solid 1px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+               background-color: var(--base-blur-text-color);
+               color: var(--secondary-background);
+               transition: 0.2s;
+          }
+     }
+     input {
+          caret-color: var(--base-blur-text-color);
+     }
+}
+
+

@@ -1,0 +1,48 @@
+.box-label {
+  font-weight: bold;
+}
+.input-container {
+  display: flex;
+  gap: 10px;
+  padding: 0.1em 0.3em;
+  font-size: 1em;
+  width: max-content;
+  background-color: transparent;
+  border-bottom: 2px solid var(--black);
+  margin-bottom: 1em;
+  width: 90%;
+  .content {
+    flex-grow: 1;
+    border: none;
+    font-size: 1em;
+    opacity: 1;
+    word-wrap: break-word;
+    max-width: 100%;
+    background-color: transparent;
+  }
+  
+}
+
+.edit-icon {
+  transform: translateY(0.2em);
+  align-self: center;
+  display: flex;
+  svg {
+    font-size: 1em;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+  .warning-icon {
+    color: red;
+    svg {
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}

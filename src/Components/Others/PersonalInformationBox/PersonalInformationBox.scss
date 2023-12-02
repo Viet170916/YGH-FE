@@ -1,0 +1,82 @@
+.information-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 100px;
+  width: 60%;
+  background-color: var(--search-bg);
+  font-weight: 600;
+  box-shadow: 0px 0px 10px 2px var(--main-border-color);
+  label {
+    font-weight: bold;
+  }
+  div:first-child {
+    align-self: center;
+    margin-left: 0px;
+  }
+  .detail-informations {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    .phone-wrapper {
+      display: flex;
+      svg {
+        position: absolute;
+        top: -23px;
+        right: 5px;
+      }
+    }
+    .input-phone {
+      width: 100%;
+      font-family: "Quicksand", sans-serif;
+      cursor: auto;
+    }
+  }
+  .save-change-btn {
+    align-self: flex-end;
+    width: max-content;
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+  .message {
+    height: 40px;
+    margin: 1em auto;
+    font-weight: bold;
+  }
+  .success {
+    color: var(--base-green);
+  }
+  .failure {
+    color: var(--red);
+  }
+}
+.formal-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 110%;
+  .avatar-container {
+    z-index: 1;
+    margin-left: 1em;
+    transition: 0.2s;
+  }
+  .introduce-container {
+    position: relative;
+    display: flex;
+    gap: 1em;
+    p{
+      margin: 0;
+    }
+    .red-button {
+      position: absolute;
+      right: 0px;
+      bottom: -3.5em;
+    }
+  }
+}

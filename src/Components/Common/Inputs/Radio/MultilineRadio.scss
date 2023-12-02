@@ -1,0 +1,10 @@
+.multiline-radio{
+    border-radius: 10px;
+    accent-color: black;
+    padding: 5px;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    &:active{
+        transform: scale(0.9);
+    }
+}

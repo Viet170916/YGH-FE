@@ -1,0 +1,14 @@
+.quill {
+
+    // flex-basis: 200px;
+    .ql-container {
+        // display: flex;  
+        min-height: 250px;
+        max-height: 300px;
+
+        .ql-editor {
+            // max-height: 100px;
+        }
+    }
+
+}

@@ -1,0 +1,35 @@
+.select{
+     margin-left: 10px;
+     height: 30px;
+     width: 160px;
+     background-color: var(--body-color-light);
+     .value{
+          display: flex;
+          align-items: center;
+          padding: 2px;
+          width: 96%;
+          height: 26px;
+          font-size: 0.8rem;
+          span{
+               color: var(--body-color);
+               padding-left: 5px;
+               display: flex;
+               align-items: center;
+          }
+     }
+     ul{
+          list-style-type: none;
+          padding-left: 0;
+
+          li{
+               span{
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.8rem;
+                    height: max-content;
+                    width: 100%;
+                    padding: 2px;
+               }
+          }
+     }
+}

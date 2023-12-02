@@ -1,0 +1,31 @@
+.options {
+     display: flex;
+     flex-wrap: wrap;
+     font-size: 0.8rem;
+     position: relative;
+     .type-option {
+          position: relative;
+          max-width: 100%;
+          overflow-wrap: break-word; /* Cho phép văn bản bị cắt ngang để xuống dòng */
+          padding: 5px;
+          display: grid;
+          align-items: center;
+          grid-template-columns: 1fr 25px;
+          background-color: var(--body-color-light);
+          color: var(--body-color);
+          margin: 5px;
+          border-radius: 1.5rem;
+          p {
+               margin: 0 5px 0 5px;
+               display: flex;
+               align-items: center;
+          }
+          button.delete-option {
+               padding: 0;
+               border: none;
+               background-color: transparent;
+               color: var(--body-color);
+               font-size: 1.3rem;
+          }
+     }
+}

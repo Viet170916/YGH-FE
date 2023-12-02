@@ -1,0 +1,26 @@
+{
+  "reservation": {
+    "receivedTime": "dd/MM/yyyy 00:00 (AM/PM)",
+    "checkinDate": "dd/MM/yyyy",
+    "checkoutDate": "dd/MM/yyyy",
+    "reservationStatus": "ENUM",
+    "paymentStatus":"true/false",
+    "user": {
+      "name": "",
+      "avatar": "url",
+      "contact": {
+        "phone": "",
+        "email": "abc@domain"
+      }
+    },
+    "accommodation": {
+      "id": "",
+      "title": "",
+      "apartment": {
+        "id": "",
+        "name": "",
+        "image": "url"
+      }
+    }
+  }
+}

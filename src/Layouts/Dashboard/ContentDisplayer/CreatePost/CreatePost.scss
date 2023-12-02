@@ -1,0 +1,61 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+.pseudo-form {
+     display: flex;
+     flex-direction: column;
+     .new-post-title {
+          // font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 1.6rem;
+          margin-bottom: 15px;
+     }
+     .card-container {
+          .post-image {
+               border: dashed 1px gray;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+
+               .accommodation-image{
+                    max-width: 100%;
+                    max-height: 100%;
+                    height: 500px;
+                    object-fit: contain;
+               }
+               img {
+
+               }
+          }
+     }
+}
+
+@mixin hide-scrollbar {
+     &::-webkit-scrollbar {
+          width: 0.5em;
+     }
+     &::-webkit-scrollbar-track {
+          background: transparent;
+     }
+     &::-webkit-scrollbar-thumb {
+          background-color: #888;
+          border-radius: 2px;
+     }
+}
+
+.create-post-layout {
+     max-width: 100% !important;
+     //&::-webkit-scrollbar {
+     //     width: 0;
+     //}
+     @include hide-scrollbar;
+     height: 100%;
+     .create-post-layout-upper {
+          overflow-y: auto;
+          height: calc(100vh - 200px);
+          padding-bottom: 20px;
+     }
+     .image-container{
+          width: 100%;
+          height: 400px;
+     }
+}

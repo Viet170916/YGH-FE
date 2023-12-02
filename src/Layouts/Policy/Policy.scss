@@ -1,0 +1,16 @@
+.policy {
+    display: flex;
+    justify-content: center;
+
+    .policy__content {
+        height: auto;
+        width: 1000px;
+        font-size: 18px;
+        margin: 30px;
+        padding: 20px;
+        //border: 3px solid rgb(0, 0, 0);
+        border-radius: 8px;
+        //background-color: rgba(156, 247, 153, 0.801);
+        //box-shadow: 5px 0 5px rgba(67, 67, 67, 0.66), 5px 0 5px rgba(67, 67, 67, 0.66), 0 5px 5px rgba(67, 67, 67, 0.66), 0 5px 5px rgba(67, 67, 67, 0.66);
+    }
+}
